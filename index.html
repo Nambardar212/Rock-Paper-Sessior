@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="game">
+        <div class="title">Rock Paper Scissor</div>
+        <div class="score">
+            <div class="playerScore">
+                <h2>Your Score</h2>
+                <p data-ns-test="user-points" class="p-count count">0</p>
+            </div>
+            <div class="computerScore">
+                <h2>Computer Score</h2>
+                <p data-ns-test="computer-points" class="c-count count">0</p>  
+            </div>
+        </div>
+        <div class="move">
+            <label for="game-number">Enter the Moves : </label>
+            <input type="number" id="gamenumber" data-ns-test="game-number" placeholder="enter the move">
+            <br>
+            <br>
+            <button data-ns-test="play-game" onclick="playGame()" id="play">Play</button>
+        </div>
+        <br>
+        <div data-ns-test="rounds-left" class="movesLeft">Moves Left : </div>
+         <br>
+        <div class="options">
+            <button data-ns-test="rock" class="rock" disabled>Rock</button>
+            <button data-ns-test="paper" class="paper" disabled>Paper</button>
+            <button data-ns-test="scissors" class="scissor" disabled>Scissors</button>
+        </div>
+        <div data-ns-test="computer-choose"></div>
+        <br>
+        <div class="result" data-ns-test="round-result"></div>
+        <br>
+        <div class="result1" data-ns-test="game-result"></div>
+        <br>
+        <button class="reload"></button>
+    </section>
+    <script src="app.js"></script>
+  
+</body>
+</html>
